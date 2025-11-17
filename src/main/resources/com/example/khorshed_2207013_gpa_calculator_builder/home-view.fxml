@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="720.0" prefWidth="1100.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_assignment.controller.HomeController">
+<BorderPane prefHeight="720.0" prefWidth="1100.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khorshed_2207013_gpa_calculator_builder.HomeController">
     <center>
         <VBox alignment="CENTER" spacing="18">
             <padding>
@@ -14,7 +14,7 @@
             </padding>
             <Label styleClass="hero-title" text="CGPA Calculator Builder" />
             <Label styleClass="hero-tagline" text="HI..STUDENTS ..CALCULATE YOUR CGPA" wrapText="true" />
-            <Button onAction="#calclution" styleClass="primary-button" text="Start CGPA Calculator" />
+            <Button onAction="#handleStartCalculator" styleClass="primary-button" text="Start CGPA Calculator" />
         </VBox>
     </center>
 </BorderPane>
