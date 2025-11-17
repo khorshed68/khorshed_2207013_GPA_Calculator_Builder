@@ -1,0 +1,186 @@
+:root {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    background-color: #f7f8fb;
+    -fx-base: #f7f8fb;
+    color: #1f2a37;
+    -fx-text-fill: #1f2a37;
+}
+
+.border-pane, .scene-root {
+    background-color: #f7f8fb;
+    -fx-background-color: #f7f8fb;
+}
+
+.hero-title {
+    font-size: 36px;
+    -fx-font-size: 36px;
+    font-weight: 700;
+    -fx-font-weight: 700;
+}
+
+.hero-tagline {
+    font-size: 16px;
+    -fx-font-size: 16px;
+    color: #4b5563;
+    -fx-text-fill: #4b5563;
+    max-width: 520px;
+    -fx-max-width: 520px;
+    text-align: center;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.primary-button {
+    background-color: linear-gradient(#2563eb, #1d4ed8);
+    -fx-background-color: linear-gradient(#2563eb, #1d4ed8);
+    color: white;
+    -fx-text-fill: white;
+    font-weight: 600;
+    -fx-font-weight: 600;
+    padding: 10px 26px;
+    -fx-padding: 10 26;
+    border-radius: 6px;
+    -fx-background-radius: 6;
+}
+
+.primary-button:hover {
+    background-color: linear-gradient(#1d4ed8, #1e40af);
+    -fx-background-color: linear-gradient(#1d4ed8, #1e40af);
+}
+
+.panel {
+    background-color: white;
+    -fx-background-color: white;
+    padding: 20px;
+    -fx-padding: 20;
+    border-color: #dbe2f2;
+    -fx-border-color: #dbe2f2;
+    border-radius: 8px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.header-panel {
+    border-width: 0 0 1px 0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.panel-title {
+    font-size: 22px;
+    -fx-font-size: 22px;
+    font-weight: 700;
+    -fx-font-weight: 700;
+}
+
+.panel-description {
+    color: #4b5563;
+    -fx-text-fill: #4b5563;
+}
+
+.content-area {
+    padding: 20px;
+    -fx-padding: 20;
+}
+
+.card {
+    background-color: white;
+    -fx-background-color: white;
+    padding: 20px;
+    -fx-padding: 20;
+    border-radius: 10px;
+    -fx-background-radius: 10;
+    border-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(45,55,72,0.08), 15, 0.2, 0, 3);
+}
+
+.card-title {
+    font-size: 18px;
+    -fx-font-size: 18px;
+    font-weight: 600;
+    -fx-font-weight: 600;
+}
+
+.caption {
+    color: #4b5563;
+    -fx-text-fill: #4b5563;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    font-weight: 600;
+    -fx-font-weight: 600;
+    text-transform: uppercase;
+    -fx-text-transform: uppercase;
+}
+
+.summary-panel {
+    background-color: white;
+    -fx-background-color: white;
+    padding: 20px;
+    -fx-padding: 20;
+    border-color: #dbe2f2;
+    -fx-border-color: #dbe2f2;
+    border-radius: 8px;
+    -fx-border-radius: 8;
+}
+
+.stat-value {
+    font-size: 28px;
+    -fx-font-size: 28px;
+    font-weight: 700;
+    -fx-font-weight: 700;
+    color: #111827;
+    fill: #111827;
+    -fx-fill: #111827;
+}
+
+.summary-card {
+    background-color: #eef2ff;
+    -fx-background-color: #eef2ff;
+    padding: 16px;
+    -fx-padding: 16;
+    border-radius: 8px;
+    -fx-border-radius: 8;
+}
+
+.result-value {
+    font-size: 26px;
+    -fx-font-size: 26px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.course-row {
+    background-color: white;
+    -fx-background-color: white;
+    padding: 14px;
+    -fx-padding: 14;
+    border-color: #e5e7eb;
+    -fx-border-color: #e5e7eb;
+    border-radius: 8px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.course-row-title {
+    font-size: 16px;
+    -fx-font-size: 16px;
+    font-weight: 600;
+    -fx-font-weight: 600;
+}
+
+.course-caption {
+    color: #6b7280;
+    -fx-text-fill: #6b7280;
+    font-size: 12px;
+    -fx-font-size: 12px;
+    text-transform: uppercase;
+    -fx-text-transform: uppercase;
+}
+
+.course-value {
+    font-size: 14px;
+    -fx-font-size: 14px;
+    font-weight: 600;
+    -fx-font-weight: 600;
+}
