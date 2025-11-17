@@ -21,8 +21,8 @@ public class Course {
                   String courseCode,
                   double courseCredit,
                   String teacherOne,
-                  String teacherOne,
-                  String result,
+                  String teacherTwo,
+                  String grade,
                   double gradePoint) {
         this.courseName.set(courseName);
         this.courseCode.set(courseCode);
