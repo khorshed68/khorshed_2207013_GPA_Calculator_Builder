@@ -1,4 +1,4 @@
-package com.example.khorshed_2207013_gpa_calculator_builder.controller;
+package com.example.khorshed_2207013_gpa_calculator_builder;
 
 import com.example.khorshed_2207013_gpa_calculator_builder.SceneNavigator;
 import javafx.fxml.FXML;
