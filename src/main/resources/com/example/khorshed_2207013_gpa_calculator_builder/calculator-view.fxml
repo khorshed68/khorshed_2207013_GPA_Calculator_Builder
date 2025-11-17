@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="720.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khorshed_2207013_gpa_calculator_builder.controller.CalculatorController">
+    <top>
+        <BorderPane styleClass="panel header-panel">
+            <left>
+                <VBox spacing="4" BorderPane.alignment="CENTER_LEFT">
+                    <Label styleClass="panel-title" text="Student GPA Calculator" />
+                    <Label styleClass="panel-description" text="Add each course, document instructor details, and unlock a formatted GPA award sheet." wrapText="true" />
+                </VBox>
+            </left>
+            <right>
+                <HBox spacing="10" BorderPane.alignment="CENTER_RIGHT">
+                    <Button onAction="#handleBackToHome" text="Back to Home" />
+                    <Button onAction="#handleResetAll" text="Reset All" />
+                </HBox>
+            </right>
+        </BorderPane>
+    </top>
+    <center>
+        <HBox alignment="TOP_LEFT" spacing="24" styleClass="content-area">
+            <VBox spacing="16" styleClass="card">
+                <Label styleClass="card-title" text="Course Entry" />
+                <GridPane hgap="12" vgap="12">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="40" />
+                        <ColumnConstraints percentWidth="60" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                    </rowConstraints>
+                    <Label text="Course Name" GridPane.rowIndex="0" />
+                    <TextField fx:id="courseNameField" promptText="DSA" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="Course Code" GridPane.rowIndex="1" />
+                    <TextField fx:id="courseCodeField" promptText="e.g. CSE2201" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Course Credit" GridPane.rowIndex="2" />
+                    <TextField fx:id="courseCreditField" promptText="e.g. 3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label text="Teacher 1" GridPane.rowIndex="3" />
+                    <TextField fx:id="teacherOneField" promptText="teacher 1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <Label text="Teacher 2" GridPane.rowIndex="4" />
+                    <TextField fx:id="teacherTwoField" promptText="teacher 2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Label text="Grade" GridPane.rowIndex="5" />
+                    <ComboBox fx:id="gradeComboBox" prefWidth="180" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <Label text="Target Total Credits" GridPane.rowIndex="6" />
+                    <Spinner fx:id="targetCreditsSpinner" prefWidth="160" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                </GridPane>
+                <HBox spacing="10">
+                    <Button onAction="#handleAddCourse" styleClass="primary-button" text="Add Course" />
+                    <Button onAction="#handleClearForm" text="Clear Form" />
+                </HBox>
+            </VBox>
+
+            <VBox spacing="12" styleClass="card" HBox.hgrow="ALWAYS">
+                <Label styleClass="card-title" text="Courses Entered" />
+                <TableView fx:id="courseTable" prefHeight="360" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="nameColumn" prefWidth="150" text="Name" />
+                        <TableColumn fx:id="codeColumn" prefWidth="90" text="Code" />
+                        <TableColumn fx:id="creditColumn" prefWidth="70" text="Credit" />
+                        <TableColumn fx:id="gradeColumn" prefWidth="70" text="Grade" />
+                        <TableColumn fx:id="teacherOneColumn" prefWidth="120" text="Teacher 1" />
+                        <TableColumn fx:id="teacherTwoColumn" prefWidth="120" text="Teacher 2" />
+                    </columns>
+                </TableView>
+                <Text fx:id="creditStatusText" styleClass="caption" text="Credits Entered: 0 / 0" />
+                <HBox spacing="10">
+                    <Button fx:id="deleteCourseButton" onAction="#handleDeleteSelected" text="Delete Selected" />
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <VBox spacing="8" styleClass="summary-panel">
+            <HBox spacing="32">
+                <VBox>
+                    <Label styleClass="caption" text="Total Credits" />
+                    <Text fx:id="totalCreditsText" styleClass="stat-value" text="0" />
+                </VBox>
+                <VBox>
+                    <Label styleClass="caption" text="GPA Preview" />
+                    <Text fx:id="gpaPreviewText" styleClass="stat-value" text="0" />
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button onAction="#handleBackToHome" text="Back to Home" />
+                <Button fx:id="calculateButton" onAction="#handleCalculateGpa" styleClass="primary-button" text="Calculate GPA" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
