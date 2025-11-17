@@ -10,18 +10,16 @@ public final class GpaCalculator {
     private static final Map<String, Double> GRADE_POINTS = new LinkedHashMap<>();
 
     static {
-        GRADE_POINTS.put("A+", 4.0);
-        GRADE_POINTS.put("A", 4.0);
-        GRADE_POINTS.put("A-", 3.7);
-        GRADE_POINTS.put("B+", 3.3);
-        GRADE_POINTS.put("B", 3.0);
-        GRADE_POINTS.put("B-", 2.7);
-        GRADE_POINTS.put("C+", 2.3);
-        GRADE_POINTS.put("C", 2.0);
-        GRADE_POINTS.put("C-", 1.7);
-        GRADE_POINTS.put("D+", 1.3);
-        GRADE_POINTS.put("D", 1.0);
-        GRADE_POINTS.put("F", 0.0);
+        GRADE_POINTS.put("A+", 4.00);
+        GRADE_POINTS.put("A", 4.75);
+        GRADE_POINTS.put("A-", 3.50);
+        GRADE_POINTS.put("B+", 3.25);
+        GRADE_POINTS.put("B", 3.00);
+        GRADE_POINTS.put("B-", 2.75);
+        GRADE_POINTS.put("C+", 2.50);
+        GRADE_POINTS.put("C", 2.25);
+        GRADE_POINTS.put("D", 2.00);
+        GRADE_POINTS.put("F", 0.00);
     }
 
     private GpaCalculator() {
