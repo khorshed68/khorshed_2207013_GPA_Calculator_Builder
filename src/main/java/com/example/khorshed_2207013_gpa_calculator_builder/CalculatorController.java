@@ -98,8 +98,8 @@ public class CalculatorController {
         codeColumn.setCellValueFactory(new PropertyValueFactory<>("courseCode"));
         creditColumn.setCellValueFactory(new PropertyValueFactory<>("courseCredit"));
         teacherOneColumn.setCellValueFactory(new PropertyValueFactory<>("teacherOne"));
-        teacherTwoColumn.setCellValueFactory(new PropertyValueFactory<>("teacherone"));
-        gradeColumn.setCellValueFactory(new PropertyValueFactory<>("result"));
+        teacherTwoColumn.setCellValueFactory(new PropertyValueFactory<>("teacherTwo"));
+        gradeColumn.setCellValueFactory(new PropertyValueFactory<>("grade"));
     }
 
     private void bindSummaryLabels() {
