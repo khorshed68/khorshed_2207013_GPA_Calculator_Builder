@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.khorshed_2207013_gpa_calculator_builder.SavedRecordsController"
+            prefHeight="720.0" prefWidth="1100.0">
+    <top>
+        <VBox spacing="6" styleClass="panel header-panel">
+            <Label text="Saved Student Records" styleClass="panel-title"/>
+            <Label text="View, manage, and export student CGPA records" styleClass="panel-description"/>
+            <HBox spacing="10">
+                <Button text="Refresh" onAction="#handleRefresh"/>
+                <Button text="Back to Calculator" onAction="#handleBack"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <HBox spacing="16" styleClass="content-area">
+            <VBox spacing="12" styleClass="card" HBox.hgrow="ALWAYS">
+                <Label text="All Records" styleClass="card-title"/>
+                <TableView fx:id="studentTable" prefHeight="400" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="studentNameColumn" text="Name" prefWidth="150"/>
+                        <TableColumn fx:id="studentIdColumn" text="Student ID" prefWidth="120"/>
+                        <TableColumn fx:id="semesterColumn" text="Semester" prefWidth="100"/>
+                        <TableColumn fx:id="totalCreditsColumn" text="Credits" prefWidth="80"/>
+                        <TableColumn fx:id="cgpaColumn" text="CGPA" prefWidth="80"/>
+                        <TableColumn fx:id="createdAtColumn" text="Created" prefWidth="140"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10">
+                    <Button fx:id="viewDetailsButton" text="View Details" onAction="#handleViewDetails" styleClass="primary-button"/>
+                    <Button fx:id="deleteButton" text="Delete Record" onAction="#handleDelete"/>
+                </HBox>
+            </VBox>
+            <VBox spacing="12" styleClass="card" prefWidth="350">
+                <Label text="Course Details" styleClass="card-title"/>
+                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="courseDetailsContainer" spacing="8">
+                        <Label fx:id="detailsLabel" text="Select a record and click 'View Details'" wrapText="true"/>
+                    </VBox>
+                </ScrollPane>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
