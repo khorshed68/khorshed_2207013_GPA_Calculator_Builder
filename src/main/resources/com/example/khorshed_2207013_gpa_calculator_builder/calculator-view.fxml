@@ -35,7 +35,7 @@
     <center>
         <HBox alignment="TOP_LEFT" spacing="24" styleClass="content-area">
             <VBox spacing="16" styleClass="card">
-                <Label styleClass="card-title" text="Course Entry" />
+                <Label styleClass="card-title" text="Student and Course Entry" />
                 <GridPane hgap="12" vgap="12">
                     <columnConstraints>
                         <ColumnConstraints percentWidth="40" />
@@ -49,27 +49,39 @@
                         <RowConstraints minHeight="30" />
                         <RowConstraints minHeight="30" />
                         <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
                     </rowConstraints>
-                    <Label text="Course Name" GridPane.rowIndex="0" />
-                    <TextField fx:id="courseNameField" promptText="DSA" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <Label text="Student Name" GridPane.rowIndex="0" />
+                    <TextField fx:id="studentNameField" promptText="Full Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-                    <Label text="Course Code" GridPane.rowIndex="1" />
-                    <TextField fx:id="courseCodeField" promptText="e.g. CSE2201" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Label text="Student ID" GridPane.rowIndex="1" />
+                    <TextField fx:id="studentIdField" promptText="2207013" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                    <Label text="Course Credit" GridPane.rowIndex="2" />
-                    <TextField fx:id="courseCreditField" promptText="e.g. 3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Label text="Semester" GridPane.rowIndex="2" />
+                    <TextField fx:id="semesterField" promptText="First" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                    <Label text="Teacher 1" GridPane.rowIndex="3" />
-                    <TextField fx:id="teacherOneField" promptText="teacher 1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Label text="Course Name" GridPane.rowIndex="3" />
+                    <TextField fx:id="courseNameField" promptText="Advanced Programming aboratory" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-                    <Label text="Teacher 2" GridPane.rowIndex="4" />
-                    <TextField fx:id="teacherTwoField" promptText="teacher 2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <Label text="Course Code" GridPane.rowIndex="4" />
+                    <TextField fx:id="courseCodeField" promptText="CSE 2200" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-                    <Label text="Grade" GridPane.rowIndex="5" />
-                    <ComboBox fx:id="gradeComboBox" prefWidth="180" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    <Label text="Course Credit" GridPane.rowIndex="5" />
+                    <TextField fx:id="courseCreditField" promptText="3.00" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
-                    <Label text="Target Total Credits" GridPane.rowIndex="6" />
-                    <Spinner fx:id="targetCreditsSpinner" prefWidth="160" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                    <Label text="Teacher 1" GridPane.rowIndex="6" />
+                    <TextField fx:id="teacherOneField" promptText="Teacher name 1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <Label text="Teacher 2" GridPane.rowIndex="7" />
+                    <TextField fx:id="teacherTwoField" promptText="Teacher name  2" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                    <Label text="Grade" GridPane.rowIndex="8" />
+                    <ComboBox fx:id="gradeComboBox" prefWidth="180" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                    <Label text="Target Total Credits" GridPane.rowIndex="9" />
+                    <Spinner fx:id="targetCreditsSpinner" prefWidth="160" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                 </GridPane>
                 <HBox spacing="10">
                     <Button onAction="#handleAddCourse" styleClass="primary-button" text="Add Course" />
