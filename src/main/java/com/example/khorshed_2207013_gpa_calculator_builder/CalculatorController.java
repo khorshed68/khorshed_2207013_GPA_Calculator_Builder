@@ -24,6 +24,12 @@ import javafx.scene.text.Text;
 public class CalculatorController {
 
     @FXML
+    private TextField studentNameField;
+    @FXML
+    private TextField studentIdField;
+    @FXML
+    private TextField semesterField;
+    @FXML
     private TextField courseNameField;
     @FXML
     private TextField courseCodeField;
@@ -87,7 +93,7 @@ public class CalculatorController {
     }
 
     private void setupTargetCreditsSpinner() {
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(9, 30, 15, 1);
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, Integer.MAX_VALUE, 15, 1);
         targetCreditsSpinner.setValueFactory(valueFactory);
         targetCreditsSpinner.valueProperty().addListener((obs, oldValue, newValue) -> updateCreditStatus());
     }
@@ -181,12 +187,28 @@ public class CalculatorController {
                 gpa,
                 targetCreditsSpinner.getValue()
         );
-        SceneNavigator.showResult(summary);
+
+        String name = studentNameField.getText() != null ? studentNameField.getText().trim() : "";
+        String id = studentIdField.getText() != null ? studentIdField.getText().trim() : "";
+        String sem = semesterField.getText() != null ? semesterField.getText().trim() : "";
+
+        SceneNavigator.showResult(summary, name, id, sem);
     }
 
     @FXML
     private void handleBackToHome() {
         SceneNavigator.showHome();
+    }
+
+
+
+    private void clearAllFields() {
+        studentNameField.clear();
+        studentIdField.clear();
+        semesterField.clear();
+        courses.clear();
+        refreshTotals();
+        clearCourseForm();
     }
 
     private void refreshTotals() {
