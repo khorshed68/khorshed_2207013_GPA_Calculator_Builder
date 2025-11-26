@@ -14,6 +14,8 @@
             <Label styleClass="panel-title" text="GPA Award Sheet" />
             <Label styleClass="panel-description" text="A polished recap of your academic progress." />
             <HBox spacing="10">
+                <Button onAction="#handleSaveRecord" text="Save Record" styleClass="primary-button" />
+                <Button onAction="#handleViewSaved" text="View Saved Records" />
                 <Button onAction="#handleBackToEntry" text="Back to Entry" />
                 <Button onAction="#handleBackHome" text="Home" textAlignment="JUSTIFY" />
             </HBox>
