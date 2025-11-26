@@ -10,7 +10,11 @@ module com.example.khorshed_2207013_gpa_calculator_builder {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens com.example.khorshed_2207013_gpa_calculator_builder to javafx.fxml;
+
+
+
     exports com.example.khorshed_2207013_gpa_calculator_builder;
 }
