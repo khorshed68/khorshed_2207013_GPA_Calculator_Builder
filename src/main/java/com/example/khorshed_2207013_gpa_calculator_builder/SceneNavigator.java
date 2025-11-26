@@ -33,16 +33,20 @@ public final class SceneNavigator {
         applyScene(loadRoot("calculator-view.fxml"));
     }
 
-    public static void showResult(GpaSummary summary) {
+    public static void showResult(GpaSummary summary, String studentName, String studentId, String semester) {
         try {
             FXMLLoader loader = new FXMLLoader(SceneNavigator.class.getResource("result-view.fxml"));
             Parent root = loader.load();
             ResultController controller = loader.getController();
-            controller.setSummary(summary);
+            controller.setData(summary, studentName, studentId, semester);
             applyScene(root);
         } catch (IOException e) {
             throw new IllegalStateException("Unable to load result view", e);
         }
+    }
+
+    public static void showSavedRecords() {
+        applyScene(loadRoot("saved-records-view.fxml"));
     }
 
     private static Parent loadRoot(String fxmlFile) {
